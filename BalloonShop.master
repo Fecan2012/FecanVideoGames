@@ -1,0 +1,137 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BalloonShop.master.cs"
+  Inherits="BalloonShop" %>
+<%@ Register Src="UserControls/CartSummary.ascx" TagName="CartSummary" TagPrefix="uc6" %>
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc5" %>
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc4" %>
+<%@ Register Src="UserControls/CategoriesList.ascx" TagName="CategoriesList" TagPrefix="uc3" %>
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>FecanGame</title>
+    <link href="GameShopNewMaster.css" rel="stylesheet" />
+    <script src="tagCloud.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 240px;
+        }
+    </style>
+</head>
+<body>
+  <form id="Form1" runat="server">
+    <div class="header_wrapper">
+            <div class="header">
+                <div><a href="Default.aspx"><img alt="FECAN GAMES" aria-autocomplete="none" src="Images/fecanlogo.png" height="70" /></a><h2>Fecan Video Games</h2></div>  				
+            </div>	
+    </div>
+    <div class="wrapper">
+    <div class="menu">
+    <ul><li><a href="Default.aspx">Home</a></li>
+            
+  <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
+        
+               
+  <li><a href="AboutUs.aspx" style="text-decoration: none;">About Us</a></li>
+ <li> <uc4:SearchBox id="SearchBox1" runat="server"> </uc4:SearchBox></li>
+</ul>
+
+    </div> 
+    <div class="homeContext">
+    <table cellspacing="0" cellpadding="0" width="960" height="1000" border="0">
+      <tr>
+        <td valign="top">
+            <div class="sub_menu">
+                <ul>
+            <uc3:CategoriesList ID="CategoriesList2" runat="server" />
+                    </ul>
+                </div>
+          <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+          </asp:ContentPlaceHolder>
+        </td>
+          
+             
+          
+          <td valign="top" class="auto-style1">
+             <span style="display:none;"> <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></span>
+            <p><b>Game of the Day:</b></p> 
+
+          <asp:DetailsView ID="DetailsView1" runat="server" Height="100px" Width="200px" DataSourceID="GameOfTheDay" AutoGenerateRows="False" DataKeyNames="ProductID" OnPageIndexChanging="DetailsView1_PageIndexChanging" AlternatingRowStyle-CssClass="ProductOFTheDay">
+              <AlternatingRowStyle CssClass="ProductOFTheDay" />
+              <Fields>
+                  <asp:BoundField DataField="ProductID" InsertVisible="False" ReadOnly="True" SortExpression="ProductID" Visible="False" >
+                 
+                  </asp:BoundField>
+                  <asp:BoundField DataField="Description" SortExpression="Description" />
+                  <asp:TemplateField SortExpression="Image">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Image") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Image") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Image ID="Image1" runat="server" ImageUrl='<%# "ProductImages/"+Eval("Thumbnail") %>' />
+                      </ItemTemplate>
+                  </asp:TemplateField>
+                  <asp:TemplateField SortExpression="Price">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Price") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Price") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Label ID="Label1" runat="server" Text='<%# "Price today!: $"+ Math.Ceiling((Convert.ToDouble( Eval("Price"))/2.0)) +"<br /> <span style=\" text-decoration: line-through;\">"+" old price: $"+Math.Round(Convert.ToDouble(Eval("Price")),2) +"CAD</span>"%>' BackColor="#022B57"></asp:Label>
+                      </ItemTemplate>
+                  </asp:TemplateField>
+                  <asp:TemplateField SortExpression="Name">
+                      <EditItemTemplate>
+                          <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                      </EditItemTemplate>
+                      <InsertItemTemplate>
+                          <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                      </InsertItemTemplate>
+                      <ItemTemplate>
+                          <asp:Label ID="Label2" runat="server" Text='<%# "<a href=\" /Product.aspx?ProductID="+Eval("ProductID")+"  \">"+Eval("Name")+ "</a>" %>'></asp:Label>
+                      </ItemTemplate>
+                  </asp:TemplateField>
+              </Fields>
+              <HeaderStyle BackColor="White" Wrap="False" />
+              </asp:DetailsView>
+              
+              <asp:SqlDataSource ID="GameOfTheDay" runat="server" ConnectionString="<%$ ConnectionStrings:BalloonShopConnection %>" SelectCommand="SELECT [ProductID], [Description], [Price], [Name], [Thumbnail] FROM [Product] WHERE ([ProductID] = @ProductID)">
+                  <SelectParameters>
+                      <asp:ControlParameter ControlID="Label1" Name="ProductID" PropertyName="Text" Type="Int32" />
+                  </SelectParameters>
+              </asp:SqlDataSource>
+              <br />
+        <p></p>
+          <uc6:CartSummary ID="CartSummary1" runat="server" />
+              <br />
+              <div id="div1">
+	<a href="/Catalog.aspx?DepartmentID=4">Xboxbox</a>
+	<a href="/Catalog.aspx?DepartmentID=2" class="red">PS4</a>
+	<a href="/Catalog.aspx?DepartmentID=2&CategoryID=12">Shooter</a>
+	<a href="/Catalog.aspx?DepartmentID=3">PC</a>
+	<a href="/Catalog.aspx?DepartmentID=1&CategoryID=6" class="red">RPG</a>
+	<a href="/Catalog.aspx?DepartmentID=1&CategoryID=3" class="yellow">Platformer</a>
+	<a href="/Catalog.aspx?DepartmentID=1" class="yellow">Wii</a>
+	<a href="/Catalog.aspx?DepartmentID=4&CategoryID=28" class="red">Action</a>
+	<a href="/Catalog.aspx?DepartmentID=1&CategoryID=4">Fighting</a>
+	<a href="/Product.aspx?ProductID=22" class="blue">Destiny</a>
+	<a href="/Product.aspx?ProductID=6">New Super Mario Bros</a>
+	<a href="/Product.aspx?ProductID=24">DOTA 2</a>
+	<a href="/Product.aspx?ProductID=29" class="blue">Wasteland 2</a>
+</div>
+        </td>
+      </tr>
+    </table>
+    </div>
+    </div>
+   
+   </form>
+   <div class="footer">&#169; Fecan Video Games Inc. 2016.  All rights reserved. All trademarks are property of their respective owners in the Canada and other countries.
+   </div>
+</body>
+</html>

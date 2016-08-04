@@ -1,0 +1,188 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>videogameShop</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>CSharp</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>videogameShop</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectName.webproj" File="ProjectName.webproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AboutUs.aspx">AboutUs.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AboutUs.aspx.cs">AboutUs.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Admin.master">Admin.master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Admin.master.cs">Admin.master.cs</ProjectItem>
+      <Folder Name="App_Code" TargetFolderName="App_Code">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShopConfiguration.cs">BalloonShopConfiguration.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CatalogAccess.cs">CatalogAccess.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="GenericDataAccess.cs">GenericDataAccess.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrdersAccess.cs">OrdersAccess.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ShoppingCartAccess.cs">ShoppingCartAccess.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Utilities.cs">Utilities.cs</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data" TargetFolderName="App_Data">
+        <ProjectItem ReplaceParameters="false" TargetFileName="ASPNETDB.MDF">ASPNETDB.MDF</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="aspnetdb_log.ldf">aspnetdb_log.ldf</ProjectItem>
+      </Folder>
+      <Folder Name="App_Themes" TargetFolderName="App_Themes">
+        <Folder Name="BalloonShopDefault" TargetFolderName="BalloonShopDefault">
+          <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShop.css">BalloonShop.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShop.skin">BalloonShop.skin</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShop.css">BalloonShop.css</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShop.master">BalloonShop.master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BalloonShop.master.cs">BalloonShop.master.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Catalog.aspx">Catalog.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Catalog.aspx.cs">Catalog.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CatalogAdmin.aspx">CatalogAdmin.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CatalogAdmin.aspx.cs">CatalogAdmin.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GameShopNewMaster.css">GameShopNewMaster.css</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <Folder Name="Images" TargetFolderName="Images">
+        <ProjectItem ReplaceParameters="false" TargetFileName="AddToCart.gif">AddToCart.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BalloonShopLogo.png">BalloonShopLogo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="blue_body_top.jpg">blue_body_top.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="line.gif">line.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="fecanlogo.png">fecanlogo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="tag_browse_bg.png">tag_browse_bg.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ViewCart.gif">ViewCart.gif</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Login.aspx">Login.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Login.aspx.cs">Login.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Oooops.aspx">Oooops.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Oooops.aspx.cs">Oooops.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="OrdersAdmin.aspx">OrdersAdmin.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="OrdersAdmin.aspx.cs">OrdersAdmin.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Product.aspx">Product.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Product.aspx.cs">Product.aspx.cs</ProjectItem>
+      <Folder Name="ProductImages" TargetFolderName="ProductImages">
+        <ProjectItem ReplaceParameters="false" TargetFileName="7Days_Img.jpg">7Days_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="7Days_Thumbnail.png">7Days_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="alien-isolation.jpg">alien-isolation.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="alien-isolation_TH.png">alien-isolation_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Assassins_Creed_IV_Black_Flag.png">Assassins_Creed_IV_Black_Flag.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Assassins_Creed_IV_Black_Flag_TH.png">Assassins_Creed_IV_Black_Flag_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="batman__arkham_knight.png">batman__arkham_knight.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="batman__arkham_knight_TH.png">batman__arkham_knight_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Battlefield-4-Xbox-One-Box-Art.jpg">Battlefield-4-Xbox-One-Box-Art.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Battlefield-4-Xbox-One-Box-Art_TH.png">Battlefield-4-Xbox-One-Box-Art_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Borderlands_Img.jpg">Borderlands_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Borderlands_Thumbnail.png">Borderlands_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Counter_Img.jpg">Counter_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Counter_Thumbnail.png">Counter_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dead-rising-3.jpg">dead-rising-3.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dead-rising-3_TH.png">dead-rising-3_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="DeadSpaceExtraction_Image.jpg">DeadSpaceExtraction_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="DeadSpaceExtraction_Image_TH.jpg">DeadSpaceExtraction_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="donkeykongcuontryreturns.jpg">donkeykongcuontryreturns.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="donkeykongcuontryreturns_TH.png">donkeykongcuontryreturns_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Dota2_Img.jpg">Dota2_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Dota2_Thumbnail.png">Dota2_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dragon-age-inquisition.png">dragon-age-inquisition.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dragon-age-inquisition_TH.png">dragon-age-inquisition_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Endless_Img.jpg">Endless_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Endless_Thumbnail.png">Endless_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FootballManager2015_Img.jpg">FootballManager2015_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FootballManager2015_Thumbnail.png">FootballManager2015_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="heros.png">heros.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="heros_TH.png">heros_TH.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Left4_Img.jpg">Left4_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Left4_Thumbnail.png">Left4_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Merchants_Img.jpg">Merchants_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Merchants_Thumbnail.png">Merchants_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MetroidPrimeTrilogy_Image.jpg">MetroidPrimeTrilogy_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MetroidPrimeTrilogy_Image_TH.jpg">MetroidPrimeTrilogy_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MonsterHunter3_Image.jpg">MonsterHunter3_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MonsterHunter3_Image_TH.jpg">MonsterHunter3_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="NewSuperMarioBrosWii_Image.jpg">NewSuperMarioBrosWii_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="NewSuperMarioBrosWii_Image_TH.jpg">NewSuperMarioBrosWii_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="NoMoreHeroes2_Image.jpg">NoMoreHeroes2_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="NoMoreHeroes2_Image_TH.jpg">NoMoreHeroes2_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bass01.jpg">ps4bass01.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bblood.jpg">ps4bblood.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bcall.jpg">ps4bcall.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bdead.jpg">ps4bdead.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bdestiny.jpg">ps4bdestiny.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4btheorder.jpg">ps4btheorder.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4btom.jpg">ps4btom.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4buncharted.jpg">ps4buncharted.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4bwitcher.jpg">ps4bwitcher.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4sass01.jpg">ps4sass01.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4sblood.jpg">ps4sblood.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4scall.jpg">ps4scall.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4sdead.jpg">ps4sdead.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4sdestiny.jpg">ps4sdestiny.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4stheotder.jpg">ps4stheotder.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4stom.jpg">ps4stom.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4suncharted.jpg">ps4suncharted.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ps4switcher.jpg">ps4switcher.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SkwardSword__Image.jpg">SkwardSword__Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SkwardSword__Image_TH.jpg">SkwardSword__Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperMarioGalaxy_Image.jpg">SuperMarioGalaxy_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperMarioGalaxy_Image_TH.jpg">SuperMarioGalaxy_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperPaperMario_Image.jpg">SuperPaperMario_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperPaperMario_Image_TH.jpg">SuperPaperMario_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperSmashBrosBrawl_Image.jpg">SuperSmashBrosBrawl_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SuperSmashBrosBrawl_Image_TH.jpg">SuperSmashBrosBrawl_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TatsunokoVSCapcom_Image.jpg">TatsunokoVSCapcom_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TatsunokoVSCapcom_Image_TH.jpg">TatsunokoVSCapcom_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TheBinding_Img.jpg">TheBinding_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TheBinding_Thumbnail.png">TheBinding_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TheLastStory_Image.jpg">TheLastStory_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TheLastStory_Image_TH.jpg">TheLastStory_Image_TH.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Wasteland_Img.jpg">Wasteland_Img.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Wasteland_Thumbnail.png">Wasteland_Thumbnail.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="XenobladeChronicles_Image.jpg">XenobladeChronicles_Image.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="XenobladeChronicles_Image_TH.jpg">XenobladeChronicles_Image_TH.jpg</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Search.aspx">Search.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Search.aspx.cs">Search.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ShoppingCart.aspx">ShoppingCart.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ShoppingCart.aspx.cs">ShoppingCart.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ShoppingCartAdmin.aspx">ShoppingCartAdmin.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ShoppingCartAdmin.aspx.cs">ShoppingCartAdmin.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="tagCloud.js">tagCloud.js</ProjectItem>
+      <Folder Name="UserControls" TargetFolderName="UserControls">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CartSummary.ascx">CartSummary.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CartSummary.ascx.cs">CartSummary.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CategoriesAdmin.ascx">CategoriesAdmin.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CategoriesAdmin.ascx.cs">CategoriesAdmin.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CategoriesList.ascx">CategoriesList.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CategoriesList.ascx.cs">CategoriesList.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DepartmentsAdmin.ascx">DepartmentsAdmin.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DepartmentsAdmin.ascx.cs">DepartmentsAdmin.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DepartmentsList.ascx">DepartmentsList.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DepartmentsList.ascx.cs">DepartmentsList.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Header.ascx">Header.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Header.ascx.cs">Header.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderDetailsAdmin.ascx">OrderDetailsAdmin.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderDetailsAdmin.ascx.cs">OrderDetailsAdmin.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductDetailsAdmin.ascx">ProductDetailsAdmin.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductDetailsAdmin.ascx.cs">ProductDetailsAdmin.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductRecommendations.ascx">ProductRecommendations.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductRecommendations.ascx.cs">ProductRecommendations.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductsAdmin.ascx">ProductsAdmin.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductsAdmin.ascx.cs">ProductsAdmin.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductsList.ascx">ProductsList.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ProductsList.ascx.cs">ProductsList.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchBox.ascx">SearchBox.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchBox.ascx.cs">SearchBox.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Test.ascx">Test.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Test.ascx.cs">Test.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserInfo.ascx">UserInfo.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserInfo.ascx.cs">UserInfo.ascx.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="videogameShop.sln">videogameShop.sln</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="web.config">web.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
